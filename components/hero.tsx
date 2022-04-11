@@ -26,7 +26,7 @@ export default function Hero() {
         Welcome to
         <br className={styleUtils['show-on-desktop']} /> {BRAND_NAME}
       </h1>
-      <p
+      <h3
         className={cn(
           styleUtils.appear,
           styleUtils['appear-fourth'],
@@ -35,7 +35,7 @@ export default function Hero() {
       >
         Let's build products, have some fun and celebrate
         <a href="https://justzht.com/" target="blank">@justzht</a>'s graduation!
-      </p>
+      </h3>
       <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.info)}>
         <p>{DATE}</p>
         <div className={styles['description-separator']} />
