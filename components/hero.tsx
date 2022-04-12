@@ -14,14 +14,33 @@
  * limitations under the License.
  */
 
+import Image from 'next/image'
 import cn from 'classnames';
 import styleUtils from './utils.module.css';
 import styles from './hero.module.css';
-import { BRAND_NAME, DATE, SITE_DESCRIPTION } from '@lib/constants';
+
+import { BRAND_NAME, DATE } from '@lib/constants';
 
 export default function Hero() {
   return (
-    <div className={styles.wrapper}>
+    <div className={cn(
+      styleUtils.appear,
+      styleUtils['appear-third'],
+      styles.heroImage
+    )}>
+      <div className={styles.heroImage}>
+        <span className={styles.computer} >
+        <Image
+          alt={'computer'}
+          title={'computer'}
+          src={"/computer.png"}
+          loading="lazy"
+          width={'200px'}
+          height={'200px'}
+        />
+        </span>
+      </div>
+
       <h1 className={cn(styleUtils.appear, styleUtils['appear-third'], styles.hero)}>
         Welcome to
         <br className={styleUtils['show-on-desktop']} /> {BRAND_NAME}
@@ -40,7 +59,7 @@ export default function Hero() {
         <p>{DATE}</p>
         <div className={styles['description-separator']} />
         <p>
-          <strong>Online & In-person</strong>
+          Online & In-person
         </p>
       </div>
     </div>
