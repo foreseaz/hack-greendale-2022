@@ -35,8 +35,8 @@ export default function Hero() {
           title={'computer'}
           src={"/computer.png"}
           loading="lazy"
-          width={'200px'}
-          height={'200px'}
+          width={'160px'}
+          height={'160px'}
         />
         </span>
       </div>
